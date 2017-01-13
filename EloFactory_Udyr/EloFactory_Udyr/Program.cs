@@ -791,12 +791,12 @@ namespace EloFactory_Udyr
             if (Config.Item("GapCloseRange").GetValue<bool>())
                 Utility.DrawCircle(Player.Position, Player.AttackRange + 800, (Player.CountEnemiesInRange(Player.AttackRange + 800) > 0 && isInEStance) ? Color.OrangeRed : Color.Green, 10, 10);
 
-            foreach (var spell in SpellList)
+            /*foreach (var spell in SpellList)
             {
                 var menuItem = Config.Item(spell.Slot + "Range").GetValue<Circle>();
                 if (menuItem.Active && (spell.Slot != SpellSlot.R || R.Level > 0))
                     Render.Circle.DrawCircle(Player.Position, spell.Range, menuItem.Color);
-            }
+            }*/
 
             if (Config.Item("DrawOrbwalkTarget").GetValue<bool>())
             {
